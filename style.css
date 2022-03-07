@@ -1,0 +1,544 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/* desain navbar container */
+
+nav {
+    display: flex;
+    box-shadow: 0 2px 4px 0 rgba(1, 1, 1, 0.1);
+    height: 8vh;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+}
+
+nav div {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+nav div ul {
+    display: flex;
+    padding: 0;
+    list-style-type: none;
+    box-sizing: border-box;
+}
+
+nav div ul li {
+    margin: 0 20px;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+nav div ul li a {
+    text-decoration: none;
+    color: red;
+    transition: 0.5s;
+}
+
+nav div ul li a:hover {
+    color: green;
+}
+
+.nav-left-active:visited {
+    color: green;
+}
+
+nav .nav-left {
+    flex: 60%;
+}
+
+nav .nav-right {
+    /* align-self: center;
+    text-align: right; */
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+nav .nav-right a {
+    text-decoration: none;
+    color: white;
+    background-color: red;
+    padding: 5px 20px;
+    transition: 0.5s;
+    border-radius: 20px;
+}
+
+.nav-contact {
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+
+/* .nav-contact:visited {
+    background-color: green;
+   
+} */
+
+@keyframes example {
+    0% {
+        background-color: red;
+    }
+    25% {
+        background-color: yellow;
+    }
+    50% {
+        background-color: blue;
+    }
+    75% {
+        background-color: green;
+    }
+    100% {
+        background-color: red;
+    }
+}
+
+nav .nav-right a:hover {
+    background-color: green;
+}
+
+
+/* design contact me */
+
+.form-contact-me {
+    background-color: rgb(240, 240, 240);
+    padding: 5% 10%;
+}
+
+.contact-input-form {
+    width: 40%;
+    margin: auto;
+}
+
+.contact-input-form div {
+    margin-bottom: 3%;
+}
+
+.contact-input-form div input {
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1rem;
+    padding: 2%;
+    border-style: none;
+    border-radius: 0.5em;
+    box-shadow: 0 2px 4px rgba(1, 1, 1, 0.1);
+    cursor: pointer;
+}
+
+.contact-input-form div label {
+    font-size: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.contact-form-header {
+    text-align: center;
+}
+
+.contact-form-header h1 {
+    font-size: 2rem;
+    box-sizing: border-box;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 10%;
+}
+
+#contact-input-subject {
+    width: 100%;
+    font-size: 1rem;
+    padding: 2%;
+    border-style: none;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(1, 1, 1, 0.1);
+    border-radius: 0.5em;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.contact-input-message textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border-style: none;
+    box-shadow: 0 2px 4px rgba(1, 1, 1, 0.1);
+    border-radius: 0.5em;
+    font-size: 1rem;
+    padding: 2%;
+    resize: none;
+    cursor: pointer;
+}
+
+.contact-input-submit {
+    text-align: end;
+}
+
+.contact-input-submit button {
+    border-style: none;
+    color: white;
+    background-color: black;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 2% 10%;
+    border-radius: 0.5em;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.contact-input-submit button:hover {
+    background-color: green;
+}
+
+
+/* design project form */
+
+.project-form {
+    /* height: 92vh; */
+    background-color: rgb(240, 240, 240);
+    padding: 5% 10%;
+}
+
+.project-input-form {
+    width: 40%;
+    margin: auto;
+}
+
+.project-input-form div {
+    margin: 3% 0;
+}
+
+.project-input-form>h1 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    margin: 0;
+    margin-bottom: 10%;
+}
+
+.project-input-form span {
+    animation-name: myproject;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes myproject {
+    0% {
+        color: red;
+    }
+    25% {
+        color: yellow;
+    }
+    50% {
+        color: blue;
+    }
+    75% {
+        color: green;
+    }
+    100% {
+        color: red;
+    }
+}
+
+.project-input-form input {
+    font-size: 1rem;
+    font-weight: 400;
+    box-sizing: border-box;
+    border-style: none;
+    box-shadow: 0 2px 4px 0 rgba(1, 1, 1, 0.1);
+    border-radius: 0.5em;
+    width: 100%;
+    padding: 2%;
+    cursor: pointer;
+}
+
+.project-input-form label {
+    font-size: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.project-input-date {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    box-sizing: border-box;
+    /* align-items: center; */
+    justify-content: center;
+    gap: 2%;
+}
+
+.project-input-form textarea {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 2%;
+    font-size: 1rem;
+    resize: none;
+    border-style: none;
+    box-shadow: 0 2px 4px rgba(1, 1, 1, 0.1);
+    border-radius: 0.5em;
+    cursor: pointer;
+}
+
+.project-input-technologi>div {
+    display: grid;
+    grid-template-columns: repeat( 2, 2fr);
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+}
+
+.project-input-technologi input {
+    width: 15%;
+    box-shadow: none;
+}
+
+.project-input-technologi div label {
+    font-size: 1rem;
+}
+
+.project-input-uploadimage input {
+    background-color: white;
+    padding: 0;
+}
+
+input[type=file]::-webkit-file-upload-button {
+    background-color: green;
+    color: white;
+    border-style: none;
+    padding: 2%;
+    opacity: 0.6;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+input[type=file]::-webkit-file-upload-button:hover {
+    opacity: 1;
+}
+
+.project-input-submit {
+    text-align: end;
+}
+
+.project-input-submit button {
+    border-style: none;
+    color: white;
+    background-color: black;
+    padding: 2% 6%;
+    font-size: 1rem;
+    border-radius: 1em;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.project-input-submit button:hover {
+    background-color: green;
+}
+
+
+/* design project line */
+
+.project-line {
+    margin: 10% 0;
+}
+
+.project-line p {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    animation-name: myproject;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+
+/* @keyframes myproject {
+    0% {
+        color: red;
+    }
+    25% {
+        color: yellow;
+    }
+    50% {
+        color: blue;
+    }
+    75% {
+        color: green;
+    }
+    100% {
+        color: red;
+    }
+} */
+
+
+/* design blod upload */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 4px 0 rgba(1, 1, 1, 0.3);
+    background-color: white;
+    border-radius: 10px;
+    box-sizing: border-box;
+    height: 500px;
+    padding: 10px;
+}
+
+.image {
+    width: 100%;
+    height: 50%;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    border-radius: 10px;
+}
+
+.tulisan {
+    height: 50%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.paragraf {
+    height: 73%;
+}
+
+.paragraf h3 {
+    margin: 10px 0;
+    margin-bottom: 0;
+}
+
+.paragraf h5 {
+    margin: 0;
+    font-weight: 200;
+}
+
+.paragraf p {
+    margin: 20px 0;
+}
+
+.icon {
+    height: 15%;
+    margin-bottom: 20px;
+}
+
+.icon a {
+    margin-right: 10px;
+    height: 100%;
+    align-self: center;
+}
+
+.tombol {
+    display: flex;
+    margin-bottom: 0;
+    padding: 0;
+    gap: 2%;
+    height: 12%;
+}
+
+.tombol button {
+    padding: 0;
+}
+
+.button-edit {
+    width: 50%;
+    border-style: none;
+    background-color: black;
+    color: white;
+    border-radius: 10em;
+}
+
+.button-delete {
+    width: 50%;
+    border-style: none;
+    background-color: black;
+    color: white;
+    border-radius: 10em;
+}
+
+
+/* design blog container */
+
+.blog-section {
+    padding: 5% 10%;
+}
+
+.blog-section h1 {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 5%;
+}
+
+.blog-section>div>p {
+    text-align: justify;
+    font-size: 1rem;
+    line-height: 1.5em;
+}
+
+.blog-section-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 5%;
+}
+
+.blog-section-left {
+    flex: 60%;
+}
+
+.blog-section-left img {
+    width: 100%;
+}
+
+.blog-section-right {
+    flex: 40%;
+}
+
+.blog-duration p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.blog-section-duration {
+    height: 50%;
+    margin-bottom: 20%;
+}
+
+.blog-section-tekno {
+    height: 50%;
+}
+
+.blog-section-tekno div {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    align-items: center;
+}
+
+.blog-section-tekno div p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
