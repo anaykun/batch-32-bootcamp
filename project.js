@@ -23,7 +23,8 @@ function addProject() {
         reactProject: reactProject,
         nextProject: nextProject,
         scriptProject: scriptProject,
-        imageProject: imageProject
+        imageProject: imageProject,
+        postDate: new Date()
     }
     console.log(project);
 
@@ -77,6 +78,7 @@ function renderProject() {
                         <p> ${projects[i].desProject}
                         </p>
                     </div>
+                    <p> ${getDistanceTime(projects[i].postDate)} </p>
 
                     <div class="icon">
 
@@ -98,9 +100,9 @@ function renderProject() {
 }
 
 function getTime(dateStart, dateEnd) {
-    // let dateStart = new Date(projects.startDateProject);
-    // let dateEnd = new Date(projects.endDateProject);
+    // let dateStart = new Date(projects.startDateProject);ndDateProject);
 
+    // let dateEnd = new Date(projects.e
     const convDateStart = new Date(dateStart);
     const convDateEnd = new Date(dateEnd);
 
@@ -140,3 +142,36 @@ function getTime(dateStart, dateEnd) {
         }
     }
 }
+
+function getDistanceTime(dateStartNow) {
+    let timeNow = new Date()
+    let timeBlog = new Date(dateStartNow)
+
+    let distance = timeNow - timeBlog // miliseconds
+
+    let dayDistance = Math.floor(distance / (24 * 60 * 60 * 1000))
+
+    if (dayDistance != 0) {
+        return dayDistance + ' day ago'
+    } else {
+        let hourDistance = Math.floor(distance / (60 * 60 * 1000))
+
+        if (hourDistance != 0) {
+            return hourDistance + ' hours ago'
+        } else {
+            let minuteDistance = Math.floor(distance / (60 * 1000))
+
+            if (minuteDistance != 0) {
+                return minuteDistance + ' minutes ago'
+            } else {
+                let secondsDistance = Math.floor(distance / 1000)
+
+                return secondsDistance + ' second ago'
+            }
+        }
+    }
+}
+
+setInterval(function() {
+    renderProject()
+}, 1000)
