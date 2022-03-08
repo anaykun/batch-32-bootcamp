@@ -542,3 +542,63 @@ input[type=file]::-webkit-file-upload-button:hover {
     align-items: center;
     gap: 10px;
 }
+
+
+/* design section home */
+
+.section-home {
+    padding: 5% 10%;
+}
+
+.section-home>div {
+    display: flex;
+    gap: 5%;
+}
+
+.section-home-left {
+    flex: 35%;
+    box-shadow: 0 4px 8px 0 rgba(1, 1, 1, 0.3);
+    padding: 2%;
+}
+
+.home-left-info {
+    text-align: justify;
+}
+
+.home-left-info table tr th {
+    border: 1px solid black;
+    text-align: center;
+}
+
+.home-left-info table tr td {
+    border: 1px solid black;
+}
+
+.home-left-info table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.section-home-right {
+    flex: 65%;
+    text-align: justify;
+}
+
+.home-right-info>p {
+    margin-bottom: 10%;
+}
+
+.home-right-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4%;
+    margin-bottom: 10%;
+}
+
+.home-right-icon {
+    width: 30%;
+}
+
+.home-right-icon a img {
+    width: 20%;
+}
